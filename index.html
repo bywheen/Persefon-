@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños, Mi Amor!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Background Audio -->
+    <audio id="background-audio" loop preload="auto" class="hidden">
+        <source src="mp3/Eva.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Control -->
+    <div class="music-control-container">
+        <button id="music-toggle-button" class="music-control-button">
+            <span class="icon-placeholder"></span>
+            <span class="loading-spinner hidden"></span>
+        </button>
+        <div class="music-indicator hidden">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Initial Play Button Overlay (if autoplay fails) -->
+    <div id="initial-play-overlay" class="initial-play-overlay hidden">
+        <div class="initial-play-content">
+            <button id="initial-play-button" class="initial-play-button">
+                <span class="icon-placeholder"></span>
+                <span class="loading-spinner hidden"></span>
+                <span class="button-text">Iniciar Música Romántica</span>
+            </button>
+            <p class="initial-play-message">Haz clic para comenzar la experiencia mágica</p>
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    <div class="background-image-container">
+        <img src="img/fondo.png" alt="Fantasy landscape background" class="background-image">
+        <div class="background-overlay"></div>
+    </div>
+
+    <!-- Floating particles -->
+    <div class="floating-particles-container">
+        <!-- Puedes añadir más partículas aquí o generarlas con JS si necesitas muchas -->
+        
+        <div class="particle" style="left: 30%; top: 50%; animation-delay: 1s;">✨</div>
+        <div class="particle" style="left: 70%; top: 80%; animation-delay: 2s;">✨</div>
+       
+        <div class="particle" style="left: 80%; top: 40%; animation-delay: 1.5s;">✨</div>
+        <div class="particle" style="left: 20%; top: 70%; animation-delay: 2.5s;">✨</div>
+        <div class="particle" style="left: 60%; top: 30%; animation-delay: 3s;">✨</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Birthday Title -->
+        <div class="birthday-title-section">
+            <div class="icon-row">
+               
+            </div>
+            <h1 class="main-title">¡Feliz Cumpleaños!</h1>
+            <p class="subtitle">Para la mujer más especial de mi vida</p>
+        </div>
+
+        <!-- Enchanted Glass Dome -->
+        <div class="glass-dome-wrapper">
+            <div class="glass-dome-container">
+                <div class="glass-dome">
+                    <div class="inner-glow"></div>
+                    <div class="highlight highlight-1"></div>
+                    <div class="highlight highlight-2"></div>
+                    <div class="orchid-container">
+                        <img src="img/orquidea1.png" alt="Beautiful orchids" class="orchid-image">
+                        <div class="orchid-glow"></div>
+                    </div>
+                </div>
+                <div class="dome-base-1"></div>
+                <div class="dome-base-2"></div>
+            </div>
+            <!-- Floating hearts around dome -->
+            <div class="floating-hearts-container">
+                <!-- Puedes añadir más corazones aquí o generarlos con JS si necesitas muchas -->
+                <span class="heart-particle" style="left: 80%; top: 30%; animation-delay: 0.5s;">❤️</span>
+                <span class="heart-particle" style="left: 20%; top: 70%; animation-delay: 1s;">❤️</span>
+                <span class="heart-particle" style="left: 10%; top: 40%; animation-delay: 1.5s;">❤️</span>
+                <span class="heart-particle" style="left: 90%; top: 60%; animation-delay: 2s;">❤️</span>
+            </div>
+        </div>
+
+        <!-- Birthday Message -->
+        <div class="birthday-message-section">
+            <p class="message-text">
+                Como esta orquídea encantada, tu belleza y gracia iluminan cada día de mi vida. 
+            Quiero que sepas que eres mi tesoro más preciado.
+            </p>
+            <button id="show-phrase-button" class="show-phrase-button">
+                <span class="icon heart-icon">❤️</span>
+                Con todo mi amor
+            </button>
+
+            <!-- Romantic Phrase Display -->
+            <div id="romantic-phrase-display" class="romantic-phrase-display hidden">
+                <div class="phrase-box">
+                    <p id="current-romantic-phrase" class="phrase-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
